@@ -5,7 +5,7 @@ face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades +'haarcascade_frontal
 eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades +'haarcascade_eye.xml')
 
 cdir = os.getcwd()
-witch = cv2.imread(cdir+"/images/giphy.gif")
+witch = cv2.imread(cdir+"/images/what.png")
 
 original_witch_h,original_witch_w,witch_channels = witch.shape
 
@@ -14,9 +14,14 @@ witch_gray = cv2.cvtColor(witch, cv2.COLOR_BGR2GRAY)
 ret, original_mask = cv2.threshold(witch_gray, 10, 255, cv2.THRESH_BINARY_INV)
 original_mask_inv = cv2.bitwise_not(original_mask)
 
-cap = cv2.VideoCapture(cdir+"/images/blogger.mp4")
+cap = cv2.VideoCapture(cdir+"/images/shorts.mp4")
+cap.set(3, 384)
+cap.set(4, 384)
 ret, img = cap.read()
 img_h, img_w = img.shape[:2]
+frameSize = (384, 384)
+res = cv2.VideoWriter('output_video.avi', cv2.VideoWriter_fourcc(*'DIVX'), 30, frameSize)
+
 
 while True:
     
@@ -79,13 +84,15 @@ while True:
         img[witch_y1:witch_y2, witch_x1:witch_x2] = dst
 
         break
-        
+    
+    res.write(img)
+    #result.write(img)
     #display image
-    cv2.imshow('img',img) 
-
-    #if user pressed 'q' break
+    cv2.imshow('img',img)    
+    
     if cv2.waitKey(1) == ord('q'): # 
-        break;
+        break
 
 cap.release() #turn off camera 
+res.release()
 cv2.destroyAllWindows() #close all windows
