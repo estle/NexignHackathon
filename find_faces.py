@@ -4,7 +4,7 @@ import os, cv2
 
 
 cdir = os.getcwd()
-img = cv2.imread(cdir+"/images/man.jpg")
+img = cv2.imread(cdir+"/images/woman.jpg")
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
