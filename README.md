@@ -12,7 +12,7 @@ During this hackathon, our team was able to create a Telegram bot that uses the 
 
 The bot uses the Telegram Bot API to receive images from users. It then processes the images using OpenCV's face detection algorithms and applies a mask overlay to any detected faces. The resulting image is sent back to the user.
 
-## BOT Results of Video Rendering
+## Results of Video Rendering
 
 Source video:
 
@@ -20,11 +20,11 @@ https://github.com/estle/NexignHackathon/assets/52665965/b44266ea-aa6c-4276-8f61
 
 Rendered video with catMask:
 
-https://github.com/estle/NexignHackathon/assets/52665965/e6fec463-8444-4100-a4d6-a3eef8ed54c3
+https://github.com/estle/NexignHackathon/assets/52665965/ca53bce9-62a7-4af0-8f8e-a9c2f5b8c286
 
 Rendered video with starMask:
 
-https://github.com/estle/NexignHackathon/assets/52665965/26aaecc6-80da-47ab-a110-39265703d8cd
+https://github.com/estle/NexignHackathon/assets/52665965/276dc6ad-9343-48f7-8111-2bdd12e2e51e
 
 ## Getting Started
 
