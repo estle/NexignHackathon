@@ -1,6 +1,5 @@
-# Хакатон Nexign x Кейс-клуб СПБПУ x Просто
-## Бот в Telegram, распознающий лицо и накладывающий забавную маску
-#### Facial Recognition Telegram Bot with Mask Overlay
+# OpenCV Face Recognition with Mask Overlay for a telegram bot
+# Распознавание лиц на OpenCV с наложением маски для telegram-бота
 
 ![Python](https://img.shields.io/badge/Python-3.8-blue)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.5.2-green)
